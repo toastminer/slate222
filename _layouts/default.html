@@ -1,52 +1,142 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infinix HOT 30 Docs</title>
+<link rel="stylesheet" href="stylesheets\jekyll-theme-slate.scss">
+<style>
+/* text font */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,maximum-scale=2">
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+.header {
+  background-color: #333;
+  color: rgb(255, 255, 255);
+  height: 75px;
+  width: 100%;
+  position:fixed;
+  top: 0;
+  z-index: 2; /* Ensure header is displayed above sidebar */
+  overflow: hidden;
+}
 
-{% seo %}
-    {% include head-custom.html %}
-  </head>
+.sidebar {
+  height: 100%;
+  margin-top: 25px;
+  width: 200px; /* adjust width as needed */
+  position: fixed;
+  top: 40px; /* adjust top position to accommodate header */
+  left: 0;
+  background-color: #333;
+  padding-top: 20px;
+}
 
-  <body>
+.tab {
+  padding: 8px 16px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  display: block;
+}
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          {% if site.github.is_project_page %}
-            <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
-          {% endif %}
+.tab:hover {
+  background-color: #555;
+}
 
-          <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
-          <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+/* active tab style */
+.tab.active {
+  background-color: #666;
+}
 
-          {% if site.show_downloads %}
-            <section id="downloads">
-              <a class="zip_download_link" href="{{ site.github.zip_url }}">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="{{ site.github.tar_url }}">Download this project as a tar.gz file</a>
-            </section>
-          {% endif %}
-        </header>
-    </div>
+/* content sections */
+.tab-content {
+  display: none;
+}
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        {{ content }}
-      </section>
-    </div>
+.tab-content.active {
+  display: block;
+}
+</style>
+</head>
+<body>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        {% if site.github.is_project_page %}
-        <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-  </body>
+  <div class="header" style="padding-left: 65px; padding-bottom: 9.9px;">
+    <h2>HOT 30 Docs</h2>
+  </div>
+
+<div class="sidebar">
+  <a href="#" class="tab active" onclick="openTab(event, 'tab1')">Home</a>
+  <a href="#" class="tab" onclick="openTab(event, 'tab2')">Files</a>
+  <a href="#" class="tab" onclick="openTab(event, 'tab3')">Terminology</a>
+  <a href="#" class="tab" onclick="openTab(event, 'tab4')">Unlocking Bootloader</a>
+  <a href="#" class="tab" onclick="openTab(event, 'tab5')">Rooting</a>
+  <a href="#" class="tab" onclick="openTab(event, 'tab6')">Installing GSIs</a>
+  <a href="#" class="tab" onclick="openTab(event, 'tab7')">Misc. Magisk Modules</a>
+  <!-- actual tabs -->
+</div>
+
+
+<div style="margin-left: 200px; padding: 20px; margin-top: 55px;"> <!-- Adjust margin-left to match sidebar width -->
+  <!-- Content sections -->
+  <div class="tab-content active" id="tab1">
+    <h2>Welcome to my docs!</h2>
+    <p>This site aims to provide additional information regarding rooting and technical what-not on the Infinix HOT 30.
+      You're welcome to ask for support in the <a href="https://t.me/infinixhot30indonesia" target="_blank">group</a>, however, please make your question as detailed as possible.</p>
+      <p>And please use the <a href="https://raw.githubusercontent.com/toastminer/.docs/main/images/a8bd8a7e-f1c3-45cb-9ffd-233bed2e5425.jpg" target="_blank">search</a> button.</p>
+      <p>We may have already answered the same if not, similar questions before, so please use the search button for your inquiry</p>
+  </div>
+  
+  <div class="tab-content" id="tab2">
+    <h2>Files</h2>
+    <p>This is the content for Tab 2.</p>
+  </div>
+  
+  <div class="tab-content" id="tab3">
+    <h2>Basic Terminology</h2>
+    <p>This is the content for Tab 3.</p>
+  </div>
+
+  <div class="tab-content" id="tab4">
+    <h2>Unlocking the bootloader</h2>
+    <p>This is the content for Tab 4.</p>
+  </div>
+
+  <div class="tab-content" id="tab5">
+    <h2>Rooting</h2>
+    <p>This is the content for Tab 5.</p>
+  </div>
+
+  <div class="tab-content" id="tab6">
+    <h2>Installing GSIs</h2>
+    <p>This is the content for Tab 6.</p>
+  </div>
+
+  <div class="tab-content" id="tab7">
+    <h2>Misc. Magisk Modules</h2>
+    <p>This is the content for Tab 7.</p>
+  </div>
+  <!-- content for tabs -->
+</div>
+
+<script>
+// function to switch between tabs
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tab-content");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].classList.remove("active");
+  }
+  document.getElementById(tabName).classList.add("active");
+  tablinks = document.getElementsByClassName("tab");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.remove("active");
+  }
+  evt.currentTarget.classList.add("active");
+}
+</script>
+
+</body>
 </html>
